@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.billsbillsbills.HelloController">
+   <children>
+      <Pane prefHeight="600.0" prefWidth="318.0" style="-fx-background-color: pink;" />
+      <Button fx:id="clientsButton" layoutX="63.0" layoutY="115.0" mnemonicParsing="false" onAction="#onClientsButtonClick" prefHeight="90.0" prefWidth="190.0" style="-fx-background-color: white;" text="Clients">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="productsButton" layoutX="63.0" layoutY="255.0" mnemonicParsing="false" onAction="#onProductsButtonClick" prefHeight="90.0" prefWidth="190.0" style="-fx-background-color: white;" text="Products">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="billsButton" layoutX="63.0" layoutY="399.0" mnemonicParsing="false" onAction="#onBillsButtonClick" prefHeight="90.0" prefWidth="190.0" style="-fx-background-color: white;" text="Bills">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
