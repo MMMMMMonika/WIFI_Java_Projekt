@@ -1,7 +1,6 @@
 package com.example.billsbillsbills;
 
 import data.Client;
-import data.ClientSelection;
 import data.DBConnection;
 import data.DataSingleton;
 import javafx.collections.FXCollections;
@@ -94,7 +93,7 @@ public class ClientsEdit {
         editEMail.setText(clientObservableList.get(0).getEMail());
         editVatNumber.setText(clientObservableList.get(0).getVatNumber());
 
-        System.out.println("ClientsEdit Singleton = " + dataSingleton.getClientSelection());
+        System.out.println("ClientsEdit Singleton = " + dataSingleton.getSelection());
         System.out.println(clientObservableList);
     }
     @FXML

@@ -38,7 +38,7 @@ public class ProductsNew {
     private TextField enterProductPrice;
     private Stage stage;
 
-    DBConnection dbConnection = new DBConnection("jdbc:mysql://localhost:3306/XXX", "root", "");
+    DBConnection dbConnection = new DBConnection("jdbc:mysql://localhost:3306/codecafe", "root", "MySQL123!");
 
     @FXML
     public void onCancelButtonClick() throws IOException {
@@ -68,8 +68,8 @@ public class ProductsNew {
         }
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("02products-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        ClientsTable clientsTable = fxmlLoader.getController();
-        clientsTable.setStage(stage);
+        ProductsTable productsTable = fxmlLoader.getController();
+        productsTable.setStage(stage);
         stage.setScene(scene);
         stage.show();
     }

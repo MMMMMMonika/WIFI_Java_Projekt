@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.billsbillsbills.BillsNew">
+    <children>
+        <Pane layoutX="25.0" layoutY="30.0" prefHeight="500.0" prefWidth="950.0" style="-fx-background-color: white;">
+            <children>
+                <Label fx:id="labelPeriodFrom" layoutX="82.0" layoutY="47.0" text="Performance Period From">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+            <TextField fx:id="enterCompanyName" layoutX="675.0" layoutY="84.0" prefHeight="25.0" prefWidth="180.0" />
+            <TextField fx:id="enterClientNumber" layoutX="675.0" layoutY="40.0" prefHeight="25.0" prefWidth="180.0" />
+            <Label fx:id="labelClientNumber" layoutX="520.0" layoutY="45.0" text="Client Number">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelCompanyName" layoutX="520.0" layoutY="86.0" text="Company Name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelPeriodUntil" layoutX="82.0" layoutY="87.0" text="Performance Period Until">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="enterPeriodFrom" layoutX="269.0" layoutY="45.0" prefWidth="150.0" />
+            <DatePicker fx:id="enterPeriodUntil" layoutX="269.0" layoutY="85.0" prefWidth="150.0" />
+            <TableView fx:id="productTable" layoutX="82.0" layoutY="178.0" prefHeight="238.0" prefWidth="334.0">
+              <columns>
+                <TableColumn fx:id="productNumber" prefWidth="75.0" text="Product Nr." />
+                <TableColumn fx:id="productName" prefWidth="175.0" text="Product" />
+                  <TableColumn fx:id="pricePerUnit" prefWidth="83.0" text="Price/Unit" />
+              </columns>
+            </TableView>
+            <TableView fx:id="addedProductsTable" layoutX="520.0" layoutY="178.0" prefHeight="238.0" prefWidth="334.0">
+              <columns>
+                <TableColumn fx:id="productNumberBill" prefWidth="93.0" text="Product Nr." />
+                  <TableColumn fx:id="productQuantityBill" prefWidth="87.0" text="Quantity" />
+                  <TableColumn fx:id="totalPriceBill" prefWidth="153.0" text="Total Price" />
+              </columns>
+            </TableView>
+            <Button fx:id="addButton" layoutX="445.0" layoutY="219.0" mnemonicParsing="false" onAction="#onAddButtonClick" text="Add">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="removeButton" layoutX="430.0" layoutY="324.0" mnemonicParsing="false" onAction="#onRemoveButtonClick" style="-: ;" text="Remove">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label fx:id="labelProducts" layoutX="83.0" layoutY="145.0" text="Products">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelProductsAddedToBill" layoutX="520.0" layoutY="145.0" text="Products added to Bill">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelQuantity" layoutX="83.0" layoutY="438.0" text="Quantity">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="enterQuantity" layoutX="186.0" layoutY="436.0" prefHeight="25.0" prefWidth="65.0" />
+            <Label fx:id="labelQuantityWarning" layoutX="278.0" layoutY="440.0" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            </children>
+        </Pane>
+        <Button fx:id="cancelButton" layoutX="25.0" layoutY="547.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onCancelButtonClick" prefHeight="35.0" prefWidth="65.0" style="-fx-background-color: white;" text="Cancel">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="createBillButton" layoutX="880.0" layoutY="547.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onCreateButtonClick" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: white;" text="Create Bill">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

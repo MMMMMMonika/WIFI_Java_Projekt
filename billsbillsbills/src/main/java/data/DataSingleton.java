@@ -3,7 +3,7 @@ package data;
 public class DataSingleton {
 
     private static final DataSingleton instance = new DataSingleton();
-    private int clientSelection;
+    private int selection;
 
     private DataSingleton() {}
 
@@ -11,11 +11,11 @@ public class DataSingleton {
         return instance;
     }
 
-    public int getClientSelection() {
-        return clientSelection;
+    public int getSelection() {
+        return selection;
     }
 
-    public void setClientSelection(int clientSelection) {
-        this.clientSelection = clientSelection;
+    public void setSelection(int selection) {
+        this.selection = selection;
     }
 }

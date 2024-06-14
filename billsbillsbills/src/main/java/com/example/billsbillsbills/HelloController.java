@@ -41,13 +41,13 @@ public class HelloController {
     }
     @FXML
     protected void onBillsButtonClick() throws IOException {
-       /* Stage stage = (Stage) clientsButton.getScene().getWindow();
+        Stage stage = (Stage) clientsButton.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("03bills-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         BillsTable billsTable = fxmlLoader.getController();
         billsTable.setStage(stage);
         stage.setScene(scene);
-        stage.show();*/
+        stage.show();
     }
 
     public void setStage(Stage stage) {

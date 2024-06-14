@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.billsbillsbills.ProductsEdit">
+    <children>
+        <Pane layoutX="25.0" layoutY="30.0" prefHeight="500.0" prefWidth="950.0" style="-fx-background-color: white;">
+            <children>
+                <Label fx:id="labelProductNumber" layoutX="82.0" layoutY="182.0" text="Product Number">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="labelProductName" layoutX="82.0" layoutY="222.0" text="Product Name">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="labelProductDesc" layoutX="82.0" layoutY="262.0" text="Product Desc.">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="labelPrice" layoutX="82.0" layoutY="302.0" text="Price per Unit">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="editProductNumber" layoutX="269.0" layoutY="177.0" prefHeight="25.0" prefWidth="600.0" />
+                <TextField fx:id="editProductName" layoutX="269.0" layoutY="217.0" prefWidth="600.0" />
+                <TextField fx:id="editProductDesc" layoutX="269.0" layoutY="257.0" prefWidth="600.0" />
+                <TextField fx:id="editPrice" layoutX="269.0" layoutY="297.0" prefWidth="600.0" />
+            </children>
+        </Pane>
+        <Button fx:id="cancelButton" layoutX="25.0" layoutY="547.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onCancelButtonClick" prefHeight="35.0" prefWidth="65.0" style="-fx-background-color: white;" text="Cancel">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="updateButton" layoutX="903.0" layoutY="547.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onUpdateButtonClick" prefHeight="35.0" prefWidth="72.0" style="-fx-background-color: white;" text="Update">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

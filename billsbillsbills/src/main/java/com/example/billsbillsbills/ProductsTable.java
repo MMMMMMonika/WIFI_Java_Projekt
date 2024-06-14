@@ -2,6 +2,7 @@ package com.example.billsbillsbills;
 
 import data.Client;
 import data.DBConnection;
+import data.DataSingleton;
 import data.Product;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -9,13 +10,18 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import logic.DBReaderService;
+import logic.ProductViewService;
+import logic.ResultToList;
 
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Optional;
 
 public class ProductsTable {
@@ -40,9 +46,24 @@ public class ProductsTable {
     public Button deleteButton;
 
     ObservableList<Product> productObservableList = FXCollections.observableArrayList();
+    DBConnection dbConnection = new DBConnection("jdbc:mysql://localhost:3306/codecafe", "root", "MySQL123!");
+    DataSingleton dataSingleton = DataSingleton.getInstance();
 
-    DBConnection dbConnection = new DBConnection("jdbc:mysql://localhost:3306/XXX", "root", "");
+    @FXML
+    public void initialize() {
+        productTable.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+        productNumber.setCellValueFactory(new PropertyValueFactory<>("productNumber"));
+        productName.setCellValueFactory(new PropertyValueFactory<>("productName"));
+        productDescription.setCellValueFactory(new PropertyValueFactory<>("productDescription"));
+        productPrice.setCellValueFactory(new PropertyValueFactory<>("productPrice"));
 
+        ResultToList<Product> productResultToList = new ProductViewService();
+        DBReaderService<Product> productDBReaderService = new DBReaderService<>(productResultToList);
+        List<Product> productList = productDBReaderService.readProductsFromDB(dbConnection);
+
+        productObservableList.addAll(productList);
+        productTable.setItems(productObservableList);
+    }
     @FXML
     public void onBackButtonClick() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("00hello-view.fxml"));
@@ -63,7 +84,17 @@ public class ProductsTable {
         stage.show();
     }
     @FXML
-    public void onEditButtonClick() {}
+    public void onEditButtonClick() throws IOException {
+        int indexSelection = productTable.getSelectionModel().getSelectedIndex();
+        dataSingleton.setSelection(productObservableList.get(indexSelection).getProductID());
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("07products-edit.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        ProductsEdit productsEdit = fxmlLoader.getController();
+        productsEdit.setStage(stage);
+        stage.setScene(scene);
+        stage.show();
+    }
     @FXML
     public void onDeleteButtonClick() throws SQLException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -90,13 +121,6 @@ public class ProductsTable {
             }
         }
     }
-
-
-
-
-
-
-
     public void setStage(Stage stage) {
         this.stage = stage;
     }

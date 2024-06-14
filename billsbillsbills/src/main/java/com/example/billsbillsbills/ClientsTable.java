@@ -1,7 +1,6 @@
 package com.example.billsbillsbills;
 
 import data.Client;
-import data.ClientSelection;
 import data.DBConnection;
 import data.DataSingleton;
 import javafx.collections.FXCollections;
@@ -106,9 +105,9 @@ public class ClientsTable {
     @FXML
     public void onEditButtonClick() throws IOException {
         int indexSelection = clientTable.getSelectionModel().getSelectedIndex();
-        dataSingleton.setClientSelection(clientObservableList.get(indexSelection).getClientID());
+        dataSingleton.setSelection(clientObservableList.get(indexSelection).getClientID());
         System.out.println("Client ID = " + clientObservableList.get(indexSelection).getClientID());
-        System.out.println("Client ID GET = " + dataSingleton.getClientSelection());
+        System.out.println("Client ID GET = " + dataSingleton.getSelection());
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("06clients-edit.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
