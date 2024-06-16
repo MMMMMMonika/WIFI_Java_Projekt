@@ -75,4 +75,16 @@ public class Product {
     public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
     }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "productID=" + productID +
+                ", productNumber=" + productNumber +
+                ", productName='" + productName + '\'' +
+                ", productPrice=" + productPrice +
+                ", quantity=" + quantity +
+                ", totalPrice=" + totalPrice +
+                '}';
+    }
 }
