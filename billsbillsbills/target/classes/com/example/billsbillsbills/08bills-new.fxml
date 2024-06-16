@@ -16,8 +16,6 @@
                         <Font size="15.0" />
                     </font>
                 </Label>
-            <TextField fx:id="enterCompanyName" layoutX="675.0" layoutY="84.0" prefHeight="25.0" prefWidth="180.0" />
-            <TextField fx:id="enterClientNumber" layoutX="675.0" layoutY="40.0" prefHeight="25.0" prefWidth="180.0" />
             <Label fx:id="labelClientNumber" layoutX="520.0" layoutY="45.0" text="Client Number">
                <font>
                   <Font size="15.0" />
@@ -80,6 +78,12 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
+            <Label fx:id="clientNumber" alignment="CENTER" layoutX="676.0" layoutY="47.0" prefHeight="21.0" prefWidth="180.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="selectCompanyName" layoutX="676.0" layoutY="85.0" onAction="#companySelected" prefHeight="25.0" prefWidth="180.0" />
             </children>
         </Pane>
         <Button fx:id="cancelButton" layoutX="25.0" layoutY="547.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onCancelButtonClick" prefHeight="35.0" prefWidth="65.0" style="-fx-background-color: white;" text="Cancel">

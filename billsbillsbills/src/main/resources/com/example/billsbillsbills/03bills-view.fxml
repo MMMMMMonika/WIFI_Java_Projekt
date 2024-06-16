@@ -26,12 +26,7 @@
             <Font size="15.0" />
          </font>
       </Button>
-      <Button fx:id="newButton" layoutX="713.0" layoutY="547.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onNewButtonClick" prefHeight="35.0" prefWidth="65.0" style="-fx-background-color: white;" text="New">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Button>
-      <Button fx:id="editButton" layoutX="794.0" layoutY="547.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onEditButtonClick" prefHeight="35.0" prefWidth="65.0" style="-fx-background-color: white;" text="Edit">
+      <Button fx:id="newButton" layoutX="795.0" layoutY="547.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onNewButtonClick" prefHeight="35.0" prefWidth="65.0" style="-fx-background-color: white;" text="New">
          <font>
             <Font size="15.0" />
          </font>

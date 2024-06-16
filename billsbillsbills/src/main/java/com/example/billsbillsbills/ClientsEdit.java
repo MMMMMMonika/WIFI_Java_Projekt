@@ -78,7 +78,7 @@ public class ClientsEdit {
     public void initialize() throws SQLException {
         ResultToList<Client> clientResultToList = new ClientViewService();
         DBReaderService<Client> clientDBReaderService = new DBReaderService<>(clientResultToList);
-        List<Client> clientList = clientDBReaderService.readSelectionFromDB(dbConnection);
+        List<Client> clientList = clientDBReaderService.readClientSelectionFromDB(dbConnection);
         clientObservableList.addAll(clientList);
 
         editClientNumber.setText(String.valueOf(clientObservableList.get(0).getClientNumber()));

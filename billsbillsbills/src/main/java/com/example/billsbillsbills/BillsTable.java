@@ -21,6 +21,7 @@ import logic.ProductViewService;
 import logic.ResultToList;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 public class BillsTable {
@@ -56,7 +57,7 @@ public class BillsTable {
     DataSingleton dataSingleton = DataSingleton.getInstance();
 
     @FXML
-    public void initialize() {
+    public void initialize() throws SQLException {
         billTable.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         billNumber.setCellValueFactory(new PropertyValueFactory<>("billNumber"));
         billDate.setCellValueFactory(new PropertyValueFactory<>("billDate"));
@@ -96,8 +97,6 @@ public class BillsTable {
         stage.setScene(scene);
         stage.show();
     }
-    @FXML
-    public void onEditButtonClick() {}
     @FXML
     public void onCancelButtonClick() {}
 

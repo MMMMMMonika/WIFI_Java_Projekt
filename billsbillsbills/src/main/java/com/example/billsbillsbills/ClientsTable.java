@@ -62,7 +62,7 @@ public class ClientsTable {
     DataSingleton dataSingleton = DataSingleton.getInstance();
 
     @FXML
-    public void initialize() {
+    public void initialize() throws SQLException {
         clientTable.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         clientNumber.setCellValueFactory(new PropertyValueFactory<>("clientNumber"));
         companyName.setCellValueFactory(new PropertyValueFactory<>("companyName"));
@@ -78,7 +78,7 @@ public class ClientsTable {
 
         ResultToList<Client> clientResultToList = new ClientViewService();
         DBReaderService<Client> clientDBReaderService = new DBReaderService<>(clientResultToList);
-        List<Client> clientList = clientDBReaderService.readFromDB(dbConnection);
+        List<Client> clientList = clientDBReaderService.readClientsFromDB(dbConnection);
 
         clientObservableList.addAll(clientList);
         clientTable.setItems(clientObservableList);
@@ -106,8 +106,6 @@ public class ClientsTable {
     public void onEditButtonClick() throws IOException {
         int indexSelection = clientTable.getSelectionModel().getSelectedIndex();
         dataSingleton.setSelection(clientObservableList.get(indexSelection).getClientID());
-        System.out.println("Client ID = " + clientObservableList.get(indexSelection).getClientID());
-        System.out.println("Client ID GET = " + dataSingleton.getSelection());
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("06clients-edit.fxml"));
         Scene scene = new Scene(fxmlLoader.load());

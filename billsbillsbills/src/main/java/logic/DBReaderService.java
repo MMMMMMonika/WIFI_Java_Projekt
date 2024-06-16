@@ -14,7 +14,7 @@ public class DBReaderService<T> {
     }
     DataSingleton dataSingleton = DataSingleton.getInstance();
 
-    public List<T> readFromDB(DBConnection dbConnection) {
+    public List<T> readClientsFromDB(DBConnection dbConnection) throws SQLException {
         String viewClientQuery = "SELECT * FROM codecafe.client";
 
         try (Connection connection = DriverManager.getConnection(
@@ -26,16 +26,12 @@ public class DBReaderService<T> {
              ResultSet resultSet = statement.executeQuery(viewClientQuery)) {
 
             return resultToList.resultSetToList(resultSet);
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
         }
     }
 
-    public List<T> readSelectionFromDB(DBConnection dbConnection) throws SQLException {
+    public List<T> readClientSelectionFromDB(DBConnection dbConnection) throws SQLException {
         String viewClientQuery = "SELECT * FROM codecafe.client WHERE clientid = ?";
         int selectClientID = dataSingleton.getSelection();
-        System.out.println("Client ID for Statement = " + selectClientID);
 
         try (Connection connection = DriverManager.getConnection(
                 dbConnection.dbUrl(),
@@ -52,7 +48,7 @@ public class DBReaderService<T> {
         }
     }
 
-    public List<T> readProductsFromDB(DBConnection dbConnection) {
+    public List<T> readProductsFromDB(DBConnection dbConnection) throws SQLException {
         String viewProductQuery = "SELECT * FROM codecafe.product";
 
         try (Connection connection = DriverManager.getConnection(
@@ -64,9 +60,6 @@ public class DBReaderService<T> {
              ResultSet resultSet = statement.executeQuery(viewProductQuery)) {
 
             return resultToList.resultSetToList(resultSet);
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
         }
     }
 
@@ -88,7 +81,7 @@ public class DBReaderService<T> {
         }
     }
 
-    public List<T> readBillsFromDB(DBConnection dbConnection) {
+    public List<T> readBillsFromDB(DBConnection dbConnection) throws SQLException {
         String viewBillQuery = "SELECT * FROM codecafe.bill";
 
         try (Connection connection = DriverManager.getConnection(
@@ -100,9 +93,6 @@ public class DBReaderService<T> {
              ResultSet resultSet = statement.executeQuery(viewBillQuery)) {
 
             return resultToList.resultSetToList(resultSet);
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
         }
     }
 }

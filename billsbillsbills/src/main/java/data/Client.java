@@ -128,19 +128,6 @@ public class Client {
 
     @Override
     public String toString() {
-        return "Client{" +
-                "clientID=" + clientID +
-                ", clientNumber=" + clientNumber +
-                ", companyName='" + companyName + '\'' +
-                ", contactName='" + contactName + '\'' +
-                ", address='" + address + '\'' +
-                ", postalCode=" + postalCode +
-                ", city='" + city + '\'' +
-                ", region='" + region + '\'' +
-                ", country='" + country + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", eMail='" + eMail + '\'' +
-                ", vatNumber='" + vatNumber + '\'' +
-                '}';
+        return companyName;
     }
 }

@@ -50,7 +50,7 @@ public class ProductsTable {
     DataSingleton dataSingleton = DataSingleton.getInstance();
 
     @FXML
-    public void initialize() {
+    public void initialize() throws SQLException {
         productTable.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         productNumber.setCellValueFactory(new PropertyValueFactory<>("productNumber"));
         productName.setCellValueFactory(new PropertyValueFactory<>("productName"));

@@ -17,8 +17,10 @@ public class ProductViewService implements ResultToList{
             String productName = resultSet.getString("productName");
             String productDesc = resultSet.getString("productDescription");
             double productPrice = resultSet.getDouble("productPrice");
+            double quantity = resultSet.getDouble("quantity");
+            double totalPrice = resultSet.getDouble("totalPrice");
 
-            productList.add(new Product(productID, productNumber, productName, productDesc, productPrice));
+            productList.add(new Product(productID, productNumber, productName, productDesc, productPrice, quantity, totalPrice));
         }
         return productList;
     }

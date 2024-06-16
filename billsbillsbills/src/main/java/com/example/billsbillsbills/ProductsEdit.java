@@ -48,7 +48,6 @@ public class ProductsEdit {
 
     ObservableList<Product> productObservableList = FXCollections.observableArrayList();
     DBConnection dbConnection = new DBConnection("jdbc:mysql://localhost:3306/codecafe", "root", "MySQL123!");
-    DataSingleton dataSingleton = DataSingleton.getInstance();
 
     @FXML
     public void initialize() throws SQLException {
