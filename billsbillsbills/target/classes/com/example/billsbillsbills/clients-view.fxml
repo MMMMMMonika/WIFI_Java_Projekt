@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(to bottom, #ff8fab, #ffe69e);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.billsbillsbills.ClientsTable">
+   <children>
+      <TableView fx:id="clientTable" layoutX="25.0" layoutY="30.0" prefHeight="500.0" prefWidth="950.0">
+        <columns>
+          <TableColumn fx:id="clientNumber" editable="false" prefWidth="70.0" style="-fx-background-color: transparent;" text="Client Nr." />
+          <TableColumn fx:id="companyName" editable="false" prefWidth="89.0" style="" text="Company" />
+            <TableColumn fx:id="contactName" editable="false" prefWidth="98.0" style="" text="Contact" />
+            <TableColumn fx:id="address" editable="false" prefWidth="153.0" style="" text="Address" />
+            <TableColumn fx:id="postalCode" editable="false" prefWidth="84.0" style="" text="Postal Code" />
+            <TableColumn fx:id="city" editable="false" prefWidth="70.0" style="" text="City" />
+            <TableColumn fx:id="country" editable="false" prefWidth="88.0" style="" text="Country" />
+            <TableColumn fx:id="phoneNumber" editable="false" prefWidth="107.0" style="" text="Phone Nr." />
+            <TableColumn fx:id="eMail" editable="false" prefWidth="102.0" style="" text="E-Mail" />
+            <TableColumn fx:id="vatNumber" editable="false" prefWidth="88.0" style="" text="VAT Nr." />
+        </columns>
+      </TableView>
+      <Button fx:id="backButton" layoutX="25.0" layoutY="547.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onBackButtonClick" prefHeight="35.0" prefWidth="65.0" style="-fx-background-color: ff8fab;" text="Back" textFill="WHITE">
+          <font>
+              <Font name="System Bold" size="15.0" />
+          </font>
+      </Button>
+      <Button fx:id="newButton" layoutX="741.0" layoutY="547.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onNewButtonClick" prefHeight="35.0" prefWidth="65.0" style="-fx-background-color: ff8fab;" text="New" textFill="WHITE">
+          <font>
+              <Font name="System Bold" size="15.0" />
+          </font>
+      </Button>
+      <Button fx:id="editButton" layoutX="822.0" layoutY="547.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onEditButtonClick" prefHeight="35.0" prefWidth="65.0" style="-fx-background-color: ff8fab;" text="Edit" textFill="WHITE">
+          <font>
+              <Font name="System Bold" size="15.0" />
+          </font>
+      </Button>
+      <Button fx:id="deleteButton" layoutX="902.0" layoutY="547.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onDeleteButtonClick" prefHeight="35.0" prefWidth="73.0" style="-fx-background-color: ff8fab;" text="Delete" textFill="WHITE">
+          <font>
+              <Font name="System Bold" size="15.0" />
+          </font>
+      </Button>
+   </children>
+</AnchorPane>

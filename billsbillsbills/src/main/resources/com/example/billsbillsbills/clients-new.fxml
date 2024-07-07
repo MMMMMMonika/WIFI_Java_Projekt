@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(to bottom, #ff8fab, #ffe69e);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.billsbillsbills.ClientsNew">
+   <children>
+      <Button fx:id="cancelButton" layoutX="25.0" layoutY="547.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onCancelButtonClick" prefHeight="35.0" prefWidth="79.0" style="-fx-background-color: ff8fab;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="saveButton" layoutX="910.0" layoutY="547.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onSaveButtonClick" prefHeight="35.0" prefWidth="65.0" style="-fx-background-color: ff8fab;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="labelCompanyName" layoutX="185.0" layoutY="150.0" text="Company Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelContactName" layoutX="185.0" layoutY="190.0" text="Contact Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAddress" layoutX="185.0" layoutY="230.0" text="Address" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPostalCode" layoutX="185.0" layoutY="310.0" text="Postal Code" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelCity" layoutX="185.0" layoutY="270.0" text="City" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelCountry" layoutX="185.0" layoutY="350.0" text="Country" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPhoneNumber" layoutX="185.0" layoutY="390.0" text="Phone Number" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelEMail" layoutX="185.0" layoutY="430.0" text="E-Mail Address" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelVatNumber" layoutX="185.0" layoutY="470.0" text="VAT Number" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelClientNumber" layoutX="185.0" layoutY="110.0" text="Client Number" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="enterClientNumber" layoutX="365.0" layoutY="108.0" prefHeight="25.0" prefWidth="450.0" promptText="Enter Client Number (max. 10 length)" />
+      <TextField fx:id="enterCompanyName" layoutX="365.0" layoutY="148.0" prefHeight="25.0" prefWidth="450.0" promptText="Enter Company Name" />
+      <TextField fx:id="enterContactName" layoutX="365.0" layoutY="188.0" prefHeight="25.0" prefWidth="450.0" promptText="Enter Contact Name" />
+      <TextField fx:id="enterAddress" layoutX="365.0" layoutY="228.0" prefHeight="25.0" prefWidth="450.0" promptText="Enter Address" />
+      <TextField fx:id="enterPostalCode" layoutX="365.0" layoutY="308.0" prefHeight="25.0" prefWidth="450.0" promptText="Enter Postal Code" />
+      <TextField fx:id="enterCity" layoutX="365.0" layoutY="268.0" prefHeight="25.0" prefWidth="450.0" promptText="Enter City" />
+      <TextField fx:id="enterVatNumber" layoutX="365.0" layoutY="468.0" prefHeight="25.0" prefWidth="450.0" promptText="Enter VAT Number" />
+      <TextField fx:id="enterCountry" layoutX="365.0" layoutY="348.0" prefHeight="25.0" prefWidth="450.0" promptText="Enter Country" />
+      <TextField fx:id="enterPhoneNumber" layoutX="365.0" layoutY="388.0" prefHeight="25.0" prefWidth="450.0" promptText="Enter Phone Number" />
+      <TextField fx:id="enterEMail" layoutX="365.0" layoutY="428.0" prefHeight="25.0" prefWidth="450.0" promptText="Enter E-Mail Address" />
+   </children>
+</AnchorPane>
