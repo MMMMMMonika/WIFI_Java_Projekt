@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(to bottom, #ff8fab, #ffe69e);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.billsbillsbills.BillsNew">
+    <children>
+        <Button fx:id="cancelButton" layoutX="25.0" layoutY="547.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onCancelButtonClick" prefHeight="35.0" prefWidth="74.0" style="-fx-background-color: ff8fab;" text="Cancel" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="createBillButton" layoutX="880.0" layoutY="547.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onCreateButtonClick" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: ff8fab;" text="Create Bill" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Button>
+      <Label fx:id="labelClientNumber" layoutX="100.0" layoutY="94.0" text="Client Number" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelCompanyName" layoutX="565.0" layoutY="94.0" text="Company Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="productTable" layoutX="99.0" layoutY="183.0" prefHeight="292.0" prefWidth="334.0">
+        <columns>
+          <TableColumn fx:id="productNumber" prefWidth="75.0" text="Product Nr." />
+          <TableColumn fx:id="productName" prefWidth="175.0" text="Product" />
+            <TableColumn fx:id="pricePerUnit" prefWidth="83.0" text="Price/Unit" />
+        </columns>
+      </TableView>
+      <TableView fx:id="addedProductsTable" layoutX="567.0" layoutY="183.0" prefHeight="292.0" prefWidth="334.0">
+        <columns>
+          <TableColumn fx:id="productNumberBill" prefWidth="93.0" text="Product Nr." />
+            <TableColumn fx:id="productQuantityBill" prefWidth="87.0" text="Quantity" />
+            <TableColumn fx:id="totalPriceBill" prefWidth="153.0" text="Total Price" />
+        </columns>
+      </TableView>
+      <Button fx:id="addButton" layoutX="479.0" layoutY="281.0" mnemonicParsing="false" onAction="#onAddButtonClick" style="-fx-background-color: ff8fab;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="removeButton" layoutX="466.0" layoutY="370.0" mnemonicParsing="false" onAction="#onRemoveButtonClick" style="-fx-background-color: ff8fab;" text="Remove" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="labelProducts" layoutX="99.0" layoutY="155.0" text="Products" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelProductsAddedToBill" layoutX="567.0" layoutY="155.0" text="Products added to Bill" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelQuantity" layoutX="102.0" layoutY="485.0" text="Quantity" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="enterQuantity" layoutX="179.0" layoutY="483.0" prefHeight="25.0" prefWidth="65.0" promptText="00.00" />
+      <Label fx:id="labelQuantityWarning" layoutX="266.0" layoutY="485.0" prefHeight="21.0" prefWidth="297.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="clientNumber" alignment="CENTER" layoutX="227.0" layoutY="94.0" prefHeight="21.0" prefWidth="113.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="selectCompanyName" layoutX="719.0" layoutY="92.0" onAction="#companySelected" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: ffe69e;" />
+    </children>
+</AnchorPane>

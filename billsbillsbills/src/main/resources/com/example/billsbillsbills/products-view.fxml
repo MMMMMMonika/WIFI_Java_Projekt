@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(to bottom, #ff8fab, #ffe69e);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.billsbillsbills.ProductsTable">
+   <children>
+      <Button fx:id="backButton" layoutX="25.0" layoutY="547.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onBackButtonClick" prefHeight="35.0" prefWidth="65.0" style="-fx-background-color: ff8fab;" text="Back" textFill="WHITE">
+          <font>
+              <Font name="System Bold" size="15.0" />
+          </font>
+      </Button>
+      <Button fx:id="newButton" layoutX="743.0" layoutY="547.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onNewButtonClick" prefHeight="35.0" prefWidth="65.0" style="-fx-background-color: ff8fab;" text="New" textFill="WHITE">
+          <font>
+              <Font name="System Bold" size="15.0" />
+          </font>
+      </Button>
+      <Button fx:id="editButton" layoutX="825.0" layoutY="547.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onEditButtonClick" prefHeight="35.0" prefWidth="65.0" style="-fx-background-color: ff8fab;" text="Edit" textFill="WHITE">
+          <font>
+              <Font name="System Bold" size="15.0" />
+          </font>
+      </Button>
+      <Button fx:id="deleteButton" layoutX="904.0" layoutY="547.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onDeleteButtonClick" prefHeight="35.0" prefWidth="71.0" style="-fx-background-color: ff8fab;" text="Delete" textFill="WHITE">
+          <font>
+              <Font name="System Bold" size="15.0" />
+          </font>
+      </Button>
+      <TableView fx:id="productTable" layoutX="25.0" layoutY="30.0" prefHeight="500.0" prefWidth="950.0">
+        <columns>
+          <TableColumn fx:id="productNumber" prefWidth="138.0" text="Product Nr." />
+          <TableColumn fx:id="productName" prefWidth="298.0" text="Product Name" />
+            <TableColumn fx:id="productDescription" prefWidth="408.0" text="Description" />
+            <TableColumn fx:id="productPrice" minWidth="0.0" prefWidth="105.0" text="Price" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

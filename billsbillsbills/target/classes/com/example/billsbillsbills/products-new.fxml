@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(to bottom, #ff8fab, #ffe69e);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.billsbillsbills.ProductsNew">
+   <children>
+      <Button fx:id="cancelButton" layoutX="25.0" layoutY="547.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onCancelButtonClick" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: ff8fab;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="saveButton" layoutX="910.0" layoutY="547.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onSaveButtonClick" prefHeight="35.0" prefWidth="65.0" style="-fx-background-color: ff8fab;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="labelProductNumber" layoutX="185.0" layoutY="138.0" text="Product Number" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelProductName" layoutX="185.0" layoutY="238.0" text="Product Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelProductDescription" layoutX="185.0" layoutY="338.0" text="Product Desc." textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="enterProductPrice" layoutX="365.0" layoutY="438.0" prefWidth="450.0" promptText="Enter Product Price (max. 10 length)" />
+      <TextField fx:id="enterProductName" layoutX="365.0" layoutY="238.0" prefWidth="450.0" promptText="Enter Product Name" />
+      <TextField fx:id="enterProductDescription" layoutX="365.0" layoutY="338.0" prefWidth="450.0" promptText="Enter Product Description" />
+      <TextField fx:id="enterProductNumber" layoutX="365.0" layoutY="138.0" prefWidth="450.0" promptText="Enter Product Number (max. 10 length)" />
+      <Label fx:id="labelProductPrice" layoutX="185.0" layoutY="438.0" text="Price per Unit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
